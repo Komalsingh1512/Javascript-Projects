@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html{
+   background-color: rgb(114, 12, 105);
+   display: grid;
+   height: 100%;
+   place-items: center;
+   text-transform: capitalize;
+   line-height: 1.2;
+   margin-bottom: .5rem;
+}
+.container{
+    background: rgba(254, 251, 251, 0.989);
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 25px 30px;
+    width: 500px;
+    height: 250px;
+}
+#submitbtn{
+    color: #fff;
+    background-color: rgb(114, 12, 105) ;
+    font-size: 1rem;
+    padding: 12px 20px ;
+    border-radius: 3px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.txt{
+    font-weight: bold;
+    padding: 10px 0;
+}
+.feedback{
+    display: none;
+}
+.show{
+    display: block;
+}
+.mesgcont{
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(4, 140, 94);
+}
+form input{
+    margin: 10px 0 0 ;
+    outline: none;
+    border: 2px solid rgb(114, 12, 105);
+}
+form input.box{
+    width: 400px;
+    height: 40px;
+    font-size: 1.2rem;
+    padding: 0 10px;
+}
