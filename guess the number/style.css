@@ -1,0 +1,226 @@
+/* ===== GOOGLE FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: 'Orbitron', sans-serif;
+  min-height: 100vh;
+  background: #0d0d0d;
+  background-image: radial-gradient(circle at top left, #ff006e, transparent),
+    radial-gradient(circle at bottom right, #3a86ff, transparent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+/* ===== MAIN CARD ===== */
+body::before {
+  content: '';
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1;
+}
+
+main {
+  width: 900px;
+  background: rgba(20, 20, 20, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  border-radius: 35px;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(12px);
+}
+
+/* ===== HEADER ===== */
+header {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #ffffff;
+  text-shadow: 0 0 15px #ff006e;
+  margin-bottom: 12px;
+}
+
+.between {
+  color: #cccccc;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+/* ===== SECRET NUMBER ===== */
+.number {
+  position: absolute;
+  top: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff006e, #8338ec);
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 6px solid white;
+  box-shadow: 0 0 30px rgba(255, 0, 110, 0.7);
+  transition: 0.4s ease;
+}
+
+/* ===== LEFT SIDE ===== */
+.left {
+  flex: 1;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+/* ===== INPUT ===== */
+.guess {
+  width: 220px;
+  padding: 18px;
+  border: 2px solid #ff006e;
+  border-radius: 18px;
+  background: #111;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  outline: none;
+  transition: 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 0, 110, 0.3);
+}
+
+.guess:focus {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 0, 110, 0.7);
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  padding: 15px 35px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #520726, #8338ec);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.35s ease;
+  box-shadow: 0 0 20px rgba(255, 0, 110, 0.5);
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(255, 0, 110, 0.9);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* ===== AGAIN BUTTON ===== */
+.again {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  padding: 12px 22px;
+  font-size: 0.9rem;
+}
+
+/* ===== RIGHT SIDE ===== */
+.right {
+  flex: 1;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ===== MESSAGE ===== */
+.message {
+  font-size: 1.8rem;
+  color: #00f5d4;
+  text-shadow: 0 0 12px rgba(0, 245, 212, 0.7);
+}
+
+/* ===== SCORE BOXES ===== */
+.label-score,
+.label-highscore {
+  padding: 22px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border-left: 5px solid #ff006e;
+  font-size: 1.2rem;
+  transition: 0.3s ease;
+}
+
+.label-score:hover,
+.label-highscore:hover {
+  transform: translateX(8px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    width: 100%;
+    padding: 35px 20px;
+    margin-top: 180px;
+  }
+
+  .left,
+  .right {
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .number {
+    width: 110px;
+    height: 110px;
+    font-size: 3rem;
+    top: 160px;
+  }
+
+  .guess {
+    width: 100%;
+  }
+
+  .again {
+    position: static;
+    margin-bottom: 20px;
+  }
+}
